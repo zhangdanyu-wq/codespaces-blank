@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟日记网页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 左上角：背景切换按钮 + 图库弹窗 -->
+    <div class="bg-control">
+        <button id="changeBgBtn">更换背景</button>
+        <div class="gallery-modal" id="galleryModal">
+            <div class="gallery-header">
+                <h3>我的背景图库</h3>
+                <button id="closeGallery">关闭</button>
+            </div>
+            <!-- 新增：本地图片上传 -->
+            <div class="upload-area">
+                <label for="bgUploadInput" class="upload-btn">上传本地图片</label>
+                <input type="file" id="bgUploadInput" accept="image/*">
+            </div>
+            <p style="margin:8px 0;font-size:14px;">或者点下方缩略图选用旧背景</p>
+            <div class="gallery-list" id="galleryList"></div>
+        </div>
+    </div>
+
+    <!-- 右上角：日记按钮 + 日记弹窗 -->
+    <div class="diary-control">
+        <button id="openDiaryBtn">写日记</button>
+        <div class="diary-modal" id="diaryModal">
+            <div class="diary-header">
+                <h3>我的日记</h3>
+                <button id="closeDiary">关闭</button>
+            </div>
+            <textarea id="diaryInput" placeholder="在这里写下今天的日记..."></textarea>
+            <button id="saveDiary">保存日记</button>
+            <div class="diary-list" id="diaryList"></div>
+        </div>
+    </div>
+
+    <!-- 中间时钟区域 -->
+    <div class="clock-box">
+        <div id="clock"></div>
+        <div id="date"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
